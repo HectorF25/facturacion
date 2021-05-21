@@ -122,6 +122,11 @@
     color: #EF3B3A;
 }
 
+.validar {
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
 body {
     background: #ccc;
     font-family: "Roboto", sans-serif;

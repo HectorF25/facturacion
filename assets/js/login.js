@@ -35,6 +35,6 @@ function Registar() {
 
     if (opcion == true) {
         alert('Espere ');
-        window.location = "views/registar.html";
+        window.location = "views/registrar.html";
     }
 }

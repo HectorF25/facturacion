@@ -10,3 +10,6 @@ $(document).ready(function() {
         $("#cantidad").val('');
     })
 })
+$(document).ready(function() {
+    $('#myTable').DataTable();
+});
