@@ -117,9 +117,19 @@
     color: #EF3B3A;
 }
 
+.registarPage {
+    cursor: pointer;
+    color: #62d668;
+}
+
 .alertaUser {
-    padding-top: 25px;
-    color: #EF3B3A;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.alertaU {
+    padding-top: 5px;
+    padding-bottom: 10px;
 }
 
 .validar {

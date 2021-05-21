@@ -1,7 +1,8 @@
 document.getElementById('enviarDatos').addEventListener('click', Login);
 document.getElementById('registarPage').addEventListener('click', Registar);
-var guardado = localStorage.getItem('datos');
-console.log('objetoObtenido: ', JSON.parse(guardado));
+let guardado = localStorage.getItem('datos');
+guardado = JSON.parse(guardado);
+console.log(guardado)
 let contador = 1;
 
 function Login() {
@@ -10,7 +11,22 @@ function Login() {
     const password = document.getElementById('passwordInput');
     alertaU = document.getElementById('alertaUser');
 
-    if (usuario.value == guardado && password.value == "56789") {
+
+    function mostarUsuario() {
+        for (let i = 0; i < guardado.length; i++) {
+            respuesta = guardado[i].usuarioFac;
+        }
+        return respuesta;
+    }
+
+    function mostarPassword() {
+        for (let i = 0; i < guardado.length; i++) {
+            respuesta1 = guardado[i].passwordFac;
+        }
+        return respuesta1;
+    }
+
+    if (usuario.value == mostarUsuario() && password.value == mostarPassword()) {
         alert('Bienvenido al sistema: ' + usuario.value);
         window.location = "views/facturar.html";
     } else if (usuario.value == "admin" && password.value == "admin123") {

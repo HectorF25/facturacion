@@ -42,8 +42,36 @@ function mostrarListado() {
 }
 
 function Registar() {
-    let per = new Persona(vectorPersonas.length + 1, obtenerUsuaro(), obtenerPassword(), 0);
-    vectorPersonas.push(per);
-    localStorage.setItem('datos', JSON.stringify(vectorPersonas));
-    mostrarListado();
+    const usuario = document.getElementById('NewUsuario').value;
+    const password = document.getElementById('NewContraseña').value;
+    if (usuario.length == 0 && password.length < 6) {
+        alertaU.innerHTML = "No has escrito nada en el Usurario y la Contraseña";
+        document.getElementById('alertaU').style.color = '#EF3B3A';
+    } else if (usuario.length == 0) {
+        alertaUser.innerHTML = "No has escrito nada en el Usurario";
+        document.getElementById('alertaUser').style.color = '#EF3B3A';
+    } else {
+        let per = new Persona(vectorPersonas.length + 1, obtenerUsuaro(), obtenerPassword(), 0);
+        vectorPersonas.push(per);
+        localStorage.setItem('datos', JSON.stringify(vectorPersonas));
+        mostrarListado();
+        alert('Usuario registrado correctamente');
+        window.location = "../index.html";
+    }
 }
+
+function mostrarPassword() {
+    var cambio = document.getElementById("NewContraseña");
+    if (cambio.type == "password") {
+        cambio.type = "text";
+        $('.icon').removeClass('fa fa-eye-slash').addClass('fa fa-eye');
+    } else {
+        cambio.type = "password";
+        $('.icon').removeClass('fa fa-eye').addClass('fa fa-eye-slash');
+    }
+}
+$(document).ready(function() {
+    $('#ShowPassword').click(function() {
+        $('#password').attr('type', $(this).is(':checked') ? 'text' : 'password');
+    });
+});
