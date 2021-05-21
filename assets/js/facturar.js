@@ -1,4 +1,5 @@
 document.getElementById('btnAgregar').addEventListener('click', registrarF);
+document.getElementById('cerrarSes').addEventListener('click', Cerrar);
 
 function CrearF(id, nombreEmpresa, fecha, nombreE, direccionE, nombreC, direccionC, producto, valorProducto) {
     this.id = id;
@@ -74,4 +75,9 @@ function registrarF() {
     vectorF.push(Fact);
     localStorage.setItem('datos', JSON.stringify(vectorF));
     mostrarListado();
+}
+
+function Cerrar() {
+    alert('Cerrando su sesion...');
+    window.location = "../index.html";
 }
