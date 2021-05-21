@@ -1,5 +1,7 @@
 document.getElementById('enviarDatos').addEventListener('click', Login);
 document.getElementById('registarPage').addEventListener('click', Registar);
+var guardado = localStorage.getItem('datos');
+console.log('objetoObtenido: ', JSON.parse(guardado));
 let contador = 1;
 
 function Login() {
@@ -8,7 +10,7 @@ function Login() {
     const password = document.getElementById('passwordInput');
     alertaU = document.getElementById('alertaUser');
 
-    if (usuario.value == "Camilo123" && password.value == "56789") {
+    if (usuario.value == guardado && password.value == "56789") {
         alert('Bienvenido al sistema: ' + usuario.value);
         window.location = "views/facturar.html";
     } else if (usuario.value == "admin" && password.value == "admin123") {
@@ -38,3 +40,19 @@ function Registar() {
         window.location = "views/registrar.html";
     }
 }
+
+function mostrarPassword() {
+    var cambio = document.getElementById("passwordInput");
+    if (cambio.type == "password") {
+        cambio.type = "text";
+        $('.icon').removeClass('fa fa-eye-slash').addClass('fa fa-eye');
+    } else {
+        cambio.type = "password";
+        $('.icon').removeClass('fa fa-eye').addClass('fa fa-eye-slash');
+    }
+}
+$(document).ready(function() {
+    $('#ShowPassword').click(function() {
+        $('#password').attr('type', $(this).is(':checked') ? 'text' : 'password');
+    });
+});

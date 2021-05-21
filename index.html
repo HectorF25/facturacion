@@ -6,13 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/11509ce6e2.js"></script>
     <title>Facturacion</title>
 </head>
 
 <body>
     <div class="container">
         <div class="info">
-            <h1>Sistema Evaluación de instructores</h1><span>Desarrollado por<i class="fa fa-heart"></i>
+            <h1>Sistema de Facturacion</h1><span>Desarrollado por<i class="fa fa-heart"></i>
             <a href="https://hectorf25.github.io/curriculumPersonal/" target="_blank">iMake_Group_Col</a></span>
         </div>
     </div>
@@ -21,6 +23,9 @@
         <div class="login-form">
             <input type="text" id="userInput" placeholder="Usuario" required pattern="[a-zA-Z0-9]+" minlength="5" maxlength="50" />
             <input type="password" id="passwordInput" placeholder="Contraseña" required pattern="[A-Za-z0-9]{8,50}+" minlength="8" maxlength="50" />
+            <div class="input-group-append">
+                <button id="show_password" class="btn btn-primary" type="button" onclick="mostrarPassword()"> <span class="fa fa-eye-slash icon"></span> </button>
+            </div>
             <button id="enviarDatos">Iniciar Sesion</button>
             <div class="alertaUser" id="alertaUser"></div>
             <p class="message">¿Aún no estas registrado?<a id="registarPage">Crear una cuenta aqui!</a></p>

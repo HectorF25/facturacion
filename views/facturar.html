@@ -17,115 +17,75 @@
 </head>
 
 <body>
-    <div id="right-panel" class="right-panel">
-        <header id="header" class="header">
-            <div class="top-left">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="PerfilAdministrador.php"><img src="assets/img/Marca.png" alt="Logo"></a>
-                    <a class="navbar-brand hidden" href="./"><img src="assets/img/Logo_Nuevo.png" alt="Logo"></a>
-                    <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
-                </div>
-            </div>
-            <div class="top-right">
-                <div class="header-menu">
-                    <div class="header-left">
-                        <button class="search-trigger"><i class="fa fa-search"></i></button>
-                        <div class="form-inline">
-                            <form class="search-form">
-                                <input class="form-control mr-sm-2" type="text" placeholder="Que quieres Buscar?" aria-label="Buscar">
-                                <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="user-area dropdown float-right">
-                        <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="user-avatar rounded-circle" src="assets/images/admin.jpg" alt="User Avatar">
-                        </a>
-
-                        <div class="user-menu dropdown-menu">
-                            <a class="nav-link" href="#"><i class="fa fa- user"></i>Mi Perfil</a>
-
-                            <a class="nav-link" href="#"><i class="fa fa -cog"></i>Configuraciones</a>
-
-                            <a class="nav-link" href="#"><i class="fa fa-power -off"></i>Cerrar Sesión</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </header>
-
-        <div class="breadcrumbs">
-            <div class="breadcrumbs-inner">
-                <div class="row m-0">
-                    <div class="col-sm-4">
-                        <div class="page-header float-left">
-                        </div>
-                    </div>
-                    <div class="col-sm-8">
+    <div class="breadcrumbs">
+        <div class="breadcrumbs-inner">
+            <div class="row m-0">
+                <div class="col-sm-4">
+                    <div class="page-header float-left">
                     </div>
                 </div>
+                <div class="col-sm-8">
+                </div>
             </div>
-            <div class="content">
-                <div class="animated fadeIn">
-                    <div class="row">
+        </div>
+        <div class="content">
+            <div class="animated fadeIn">
+                <div class="row">
 
-                        <div class="col-md-12">
-                            <div class="card">
-                                <div class="card-header">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
 
-                                    <form action="#" target="" method="#" name="formDatosPersonales">
-                                        <h2>FACTURAR</h2><br />
-                                        <label for="NumeroF">Numero de Factura</label>
+                                <form action="#" target="" method="#" name="formDatosPersonales">
+                                    <h2>FACTURAR</h2><br />
+                                    <label for="NumeroF">Numero de Factura</label>
 
-                                        <input type="text" name="NumF" id="NumF" placeholder=" Ingrese el numero de la factura" />
-                                        <br>
-                                        <label for="producto">Fecha y hora de facturación</label>
-                                        <input type="datetime-local" name="fecha" id="fecha"><br>
-
-
-                                        <label for="especificacionP">Nombre del Emisor</label>
-                                        <input type="text" name="nombreE" id="nombreE" placeholder="Ingrese el nombre del emisor" required /><br />
-
-                                        <label for="especificacionP">Dirección del Emisor</label>
-                                        <input type="text" name="direccionE" id="direccionE" placeholder="Ingrese la direccion del emisor" required /><br />
-
-                                        <label for="especificacionP">Nombre del Cliente</label>
-                                        <input type="text" name="nombreC" id="nombreC" placeholder="Ingrese el nombre del cliente" required /><br />
-
-                                        <label for="especificacionP">Dirección del Cliente</label>
-                                        <input type="text" name="direccionC" id="direccionC" placeholder="Ingrese la direccion del cliente" required /><br />
-
-                                        <label for="especificacionP">Valor del Pedido</label>
-                                        <input type="text" name="valorP" id="valorP" placeholder="Ingrese el valor del pedido" required /><br />
-                                        <center>
-                                            <input type="submit" class="btn-dark" name="btnAgregar" value="Crear Factura" />
-                                        </center>
-                                    </form>
+                                    <input type="text" name="NumF" id="NumF" placeholder=" Ingrese el numero de la factura" />
+                                    <br>
+                                    <label for="producto">Fecha y hora de facturación</label>
+                                    <input type="datetime-local" name="fecha" id="fecha"><br>
 
 
-                                </div>
+                                    <label for="especificacionP">Nombre del Emisor</label>
+                                    <input type="text" name="nombreE" id="nombreE" placeholder="Ingrese el nombre del emisor" required /><br />
+
+                                    <label for="especificacionP">Dirección del Emisor</label>
+                                    <input type="text" name="direccionE" id="direccionE" placeholder="Ingrese la direccion del emisor" required /><br />
+
+                                    <label for="especificacionP">Nombre del Cliente</label>
+                                    <input type="text" name="nombreC" id="nombreC" placeholder="Ingrese el nombre del cliente" required /><br />
+
+                                    <label for="especificacionP">Dirección del Cliente</label>
+                                    <input type="text" name="direccionC" id="direccionC" placeholder="Ingrese la direccion del cliente" required /><br />
+
+                                    <label for="especificacionP">Valor del Pedido</label>
+                                    <input type="text" name="valorP" id="valorP" placeholder="Ingrese el valor del pedido" required /><br />
+                                    <center>
+                                        <input type="submit" class="btn-dark" name="btnAgregar" value="Crear Factura" />
+                                    </center>
+                                </form>
+
+
                             </div>
                         </div>
-
-
                     </div>
                 </div>
             </div>
-            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
 
-            <footer class="site-footer">
-                <div class="footer-inner bg-white">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            Copyright &copy; 2021 IMAKE
-                        </div>
+        <footer class="site-footer">
+            <div class="footer-inner bg-white">
+                <div class="row">
+                    <div class="col-sm-6">
+                        Copyright &copy; 2021 IMAKE
                     </div>
                 </div>
-            </footer>
+            </div>
+        </footer>
 
-        </div>
-        <script src="../assets/js/facturar.js"></script>
+    </div>
+    <script src="../assets/js/facturar.js"></script>
 </body>
 
 </html>
