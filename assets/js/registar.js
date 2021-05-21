@@ -1,4 +1,6 @@
 document.getElementById('enviarDatos').addEventListener('click', Registar);
+export const vectorUsuarios = [];
+export const vectorPassword = [];
 
 let pass = document.getElementById('NewContraseña');
 
@@ -15,5 +17,8 @@ pass.oninput = function() {
 }
 
 function Registar() {
-
+    for (i = 0; i < 1; i++) {
+        vectorUsuarios[i] = document.getElementById('NewUsuario');
+        vectorPassword[i] = document.getElementById('NewContraseña');
+    }
 }
