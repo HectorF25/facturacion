@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../assets/css/index.css" />
+    <title>Registrar</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="info">
+            <h1>Registro de usuarios</h1>
+        </div>
+    </div>
+    <div class="form">
+        <div class="thumbnail"><img src="https://aescolombia.com.co/wp-content/uploads/2019/07/facturacion_electronica.png" /></div>
+        <div class="login-form">
+            <input type="text" id="NewUsuario" placeholder="Digite su usuario" required pattern="[a-zA-Z0-9]+" minlength="5" maxlength="50" />
+            <input type="password" id="NewContraseña" placeholder="Digite su contraseña" />
+            <div class="validar" id="validar"></div>
+            <button id="enviarDatos">Registrarse</button>
+            <div class="alertaUser" id="alertaUser"></div>
+        </div>
+    </div>
+    <script src="../assets/js/registar.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
+    <title>Facturacion</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="info">
+            <h1>Sistema Evaluación de instructores</h1><span>Desarrollado por<i class="fa fa-heart"></i>
+            <a href="https://hectorf25.github.io/curriculumPersonal/" target="_blank">Hector Florez</a></span>
+        </div>
+    </div>
+    <div class="form">
+        <div class="thumbnail"><img src="assets/img/1200px-Sena_Colombia_logo.svg.png" /></div>
+        <div class="login-form">
+            <input type="text" id="userInput" placeholder="Usuario" required pattern="[a-zA-Z0-9]+" minlength="5" maxlength="50" />
+            <input type="password" id="passwordInput" placeholder="Contraseña" required pattern="[A-Za-z0-9]{8,50}+" minlength="8" maxlength="50" />
+            <button id="enviarDatos">Iniciar Sesion</button>
+            <div class="alertaUser" id="alertaUser"></div>
+            <p class="message">¿Aún no estas registrado?<a href="#">Crear una cuenta aqui!</a></p>
+        </div>
+    </div>
+    <script src="assets/js/login.js"></script>
+</body>
+
+</html>
