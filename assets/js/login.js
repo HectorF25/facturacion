@@ -1,4 +1,5 @@
 document.getElementById('enviarDatos').addEventListener('click', Login);
+document.getElementById('registarPage').addEventListener('click', Registar);
 let contador = 1;
 
 function Login() {
@@ -26,5 +27,14 @@ function Login() {
             alertaU.innerText = "El botón ha sido bloqueado, recargue la pagina para intentar nuevamente";
         }
         contador++;
+    }
+}
+
+function Registar() {
+    const opcion = confirm("Usted sera redireccionado a la pagina de registro");
+
+    if (opcion == true) {
+        alert('Espere ');
+        window.location = "views/registar.html";
     }
 }
