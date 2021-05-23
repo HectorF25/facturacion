@@ -4,65 +4,105 @@
 <head>
     <title>Ejemplo de JavaScript</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/CSS" href="../assets/css/facturar.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/CSS" href="../assets/css/facturar.css" />
+    <link rel="shortcut icon" type="image/ico" href="../assets/images/factura.png" />
+    <script src="https://kit.fontawesome.com/11509ce6e2.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
 </head>
 
 <body>
     <nav class="navbar">
         <a class="navbar-brand">
-            <img src="../assets/images/factura.png" width="30" height="30" class="d-inline-block align-top" alt=""> Sistema de Facturación
+            <img src="../assets/images/factura.png" width="30" height="30" class="d-inline-block align-top" alt="" /> Sistema de Facturación
         </a>
-        <form class="d-flex" action="../index.html">
-            <button class="btn btn-outline-success" id="cerrarSes">Cerrar Sesión</button>
-        </form>
+        <button class="btn btn-dark" id="cerrarSes">Cerrar Sesión</button>
     </nav>
     <form class="formEvaluation">
         <div class="title">
             <h2>FACTURAR</h2>
         </div>
-        <div>
-            <div class="content">
-                <div class="animated fadeIn">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <label for="producto">Nombre Empresa</label>
-                                    <input type="text" name="nombreEmpresa" id="nombreEmpresa" class="form-control"><br>
-                                    <label for="producto">Fecha y hora de facturación</label>
-                                    <input type="datetime-local" name="fecha" id="fecha" class="form-control"><br>
+        <div class="content">
+            <div class="animated fadeIn">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <label for="producto">Nombre Empresa</label>
+                                <input type="text" name="nombreEmpresa" id="nombreEmpresa" class="form-control" /><br />
+                                <label for="producto">Fecha y hora de facturación</label>
+                                <input type="datetime-local" name="fecha" id="fecha" class="form-control" /><br />
 
-                                    <label for="especificacionP">Nombre del Emisor</label>
-                                    <input type="text" name="nombreE" id="nombreE" placeholder="Ingrese el nombre del emisor" class="form-control" required /><br />
+                                <label for="especificacionP">Nombre del Emisor</label>
+                                <input type="text" name="nombreE" id="nombreE" placeholder="Ingrese el nombre del emisor" class="form-control" required /><br />
 
-                                    <label for="especificacionP">Dirección de la empresa</label>
-                                    <input type="text" name="direccionE" id="direccionE" placeholder="Ingrese la direccion del emisor" class="form-control" required /><br />
+                                <label for="especificacionP">Dirección de la empresa</label>
+                                <input type="text" name="direccionE" id="direccionE" placeholder="Ingrese la direccion del emisor" class="form-control" required /><br />
 
-                                    <label for="especificacionP">Nombre del Cliente</label>
-                                    <input type="text" name="nombreC" id="nombreC" placeholder="Ingrese el nombre del cliente" class="form-control" required /><br />
+                                <label for="especificacionP">Nombre del Cliente</label>
+                                <input type="text" name="nombreC" id="nombreC" placeholder="Ingrese el nombre del cliente" class="form-control" required /><br />
 
-                                    <label for="especificacionP">Dirección del Cliente</label>
-                                    <input type="text" name="direccionC" id="direccionC" placeholder="Ingrese la direccion del cliente" class="form-control" required /><br />
+                                <label for="especificacionP">Dirección del Cliente</label>
+                                <input type="text" name="direccionC" id="direccionC" placeholder="Ingrese la direccion del cliente" class="form-control" required /><br />
 
-                                    <label for="especificacionP">Nombre Producto</label>
-                                    <input type="text" name="producto" id="producto" placeholder="Ingrese el nombre del producto" class="form-control" required /><br />
+                                <label for="especificacionP">Nombre Producto</label>
+                                <input type="text" name="producto" id="producto" placeholder="Ingrese el nombre del producto" class="form-control" required /><br />
 
-                                    <label for="especificacionP">Valor del Pedido</label>
-                                    <input type="text" name="valorP" id="valorP" placeholder="Ingrese el valor del pedido" class="form-control" required /><br />
-                                    <center>
-                                        <button id="btnAgregar" name="btnAgregar" class="btn btn-outline-dark">Crear</button>
-                                        <input type="button" name="crearF" value="Ver Factura" class="btn btn-dark" onclick="generarTabla()">
-                                    </center>
+                                <label for="especificacionP">Cantdad Producto</label>
+                                <input type="number" name="productoCan" id="productoCan" placeholder="Ingrese la cantidad del producto" class="form-control" required /><br />
+
+                                <label for="especificacionP">Valor del producto</label>
+                                <input type="number" name="valorP" id="valorP" placeholder="Ingrese el valor del producto" class="form-control" required /><br />
+                                <center>
+                                    <input class="btn btn-outline-dark" type="button" id="btnAgregar" value="Crear" />
+                                    <button type="button" name="crearF" id="verFacturas" class="btn btn-dark"><i class="fas fa-file-invoice">&nbsp;Ver Facturas</i></button>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <form id="facturasList" class="formEvaluation">
+        <div class="title">
+            <h2>FACTURAS</h2>
+        </div>
+        <div class="content">
+            <div class="animated fadeIn">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-hover border-primary" id="tabla" border="2" width="100%">
+                                        <tr>
+                                            <th id="idFactura">id Factura</th>
+                                            <th id="empresaNombre">Nombre Empresa</th>
+                                            <th id="fechaHora">Fecha y hora de facturación</th>
+                                            <th id="nombreEmisor">Nombre del Emisor</th>
+                                            <th id="dirEmp">Dirección de la empresa</th>
+                                            <th id="npombreCliente">Nombre del Cliente</th>
+                                            <th id="dirCliente">Dirección del Cliente</th>
+                                            <th id="nombreProducto">Nombre Producto</th>
+                                            <th id="nombreProducto">Cantidad</th>
+                                            <th id="valorPedido">Valor del Producto</th>
+                                            <th id="valorPedido">Valor sin Iva</th>
+                                            <th id="valorPedido">Subtotal</th>
+                                            <th id="valorPedido">Total</th>
+                                        </tr>
+
+                                    </table>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
+        </div>
     </form>
-    <div id="listado"></div>
+    <script src="../assets/js/consultarFacturas.js"></script>
     <script src="../assets/js/facturar.js"></script>
 </body>
 

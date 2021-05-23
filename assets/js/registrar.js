@@ -1,4 +1,5 @@
 document.getElementById('enviarDatosRegistro').addEventListener('click', Registar);
+document.getElementById('loginPage').addEventListener('click', loginPage);
 let pass = document.getElementById('NewContraseña');
 
 pass.oninput = function() {
@@ -19,7 +20,15 @@ function Persona(id, usuarioFac, passwordFac) {
     this.passwordFac = passwordFac;
 }
 
-let vectorPersonas = [];
+let vectorPersonas = [
+    { id: 1, usuarioFac: "CATA2345", passwordFac: "975436*Cata" },
+    { id: 2, usuarioFac: "Camilo123", passwordFac: "56789*Cam" },
+    { id: 3, usuarioFac: "LuisC111", passwordFac: "LuisC1*" },
+    { id: 4, usuarioFac: "hectorF25", passwordFac: "hector(F25)" },
+    { id: 5, usuarioFac: "Cristian23", passwordFac: "Cristian23*" },
+    { id: 6, usuarioFac: "EdwSp", passwordFac: "EdwSp(01)" },
+];
+localStorage.setItem('datos', JSON.stringify(vectorPersonas));
 
 function obtenerUsuaro() {
     let obtenerU = document.getElementById("NewUsuario").value;
@@ -56,6 +65,14 @@ function Registar() {
         localStorage.setItem('datos', JSON.stringify(vectorPersonas));
         mostrarListado();
         alert('Usuario registrado correctamente');
+    }
+}
+
+function loginPage() {
+    const opcion = confirm("Usted sera redireccionado a la pagina de Login");
+
+    if (opcion == true) {
+        alert('Espere ');
         window.location = "../index.html";
     }
 }

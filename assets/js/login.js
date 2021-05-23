@@ -1,5 +1,5 @@
 document.getElementById('enviarDatos').addEventListener('click', Login);
-document.getElementById('registarPage').addEventListener('click', Registar);
+document.getElementById('registarPage').addEventListener('click', registerPage);
 let guardado = localStorage.getItem('datos');
 guardado = JSON.parse(guardado);
 console.log(guardado)
@@ -42,13 +42,14 @@ function Login() {
         document.getElementById('passwordInput').value = "";
         if (contador === 3) {
             document.getElementById('enviarDatos').disabled = true;
+            document.getElementById('enviarDatos').style.color = '#EF3B3A';
             alertaU.innerText = "El botón ha sido bloqueado, recargue la pagina para intentar nuevamente";
         }
         contador++;
     }
 }
 
-function Registar() {
+function registerPage() {
     const opcion = confirm("Usted sera redireccionado a la pagina de registro");
 
     if (opcion == true) {
