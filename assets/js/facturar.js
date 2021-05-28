@@ -8,13 +8,7 @@ function CrearF(id, articulo, cantidad, valorProducto, porcentajeIva) {
     this.valorProducto = valorProducto;
     this.porcentajeIva = porcentajeIva;
 }
-let vectorF = [
-    { id: 1, articulo: "Coca Cola Zero", cantidad: "4", valorProducto: "4000", porcentajeIva: "19" },
-    { id: 2, articulo: "Arroz Roa", cantidad: "8", valorProducto: "2000", porcentajeIva: "19" },
-    { id: 3, articulo: "Chocolatina Jumbo", cantidad: "5", valorProducto: "2500", porcentajeIva: "19" },
-    { id: 4, articulo: "Jugo Hit", cantidad: "2", valorProducto: "3000", porcentajeIva: "19" },
-    { id: 5, articulo: "Lenteja", cantidad: "10", valorProducto: "1500", porcentajeIva: "19" },
-];
+let vectorF = [];
 
 function obtenerArticulo() {
     let articulo = document.getElementById('articulo').value;

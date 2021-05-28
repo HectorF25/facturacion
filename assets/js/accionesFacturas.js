@@ -11,10 +11,6 @@ $(document).ready(function() {
         porcentajeIva = fila.find('td:eq(4)').text();
 
         $("#codFact").val(id);
-        $("#articuloFact").val(articulo);
-        $("#productoCanFac").val(cantidad);
-        $("#precioIvaFact").val(valorProducto);
-        $("#porcentajeIvaFac").val(porcentajeIva);
 
         $(".modal-header").css("background-color", "#56D85A");
         $(".modal-header").css("color", "white");

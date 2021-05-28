@@ -65,7 +65,7 @@ function Registar() {
         localStorage.setItem('datos', JSON.stringify(vectorPersonas));
         mostrarListado();
         alert('Usuario registrado correctamente');
-        window.location = "registrar.html";
+        window.location = "../index.html";
     }
 }
 

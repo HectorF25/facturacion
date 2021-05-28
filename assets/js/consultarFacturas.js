@@ -20,15 +20,19 @@ function init() {
     }, false);
 }
 
-let precioSinIva = []
-let subtotalCompra = []
-let totalCompra = []
+let precioSinIva = [];
+let subtotalCompra = [];
+let valorIva = [];
+let totalCompra = [];
+let totalFactura = 0;
 
 function calculoIva() {
     for (i = 0; i < guardadoFac.length; i++) {
         precioSinIva[i] = guardadoFac[i].valorProducto / ((guardadoFac[i].porcentajeIva / 100) + 1);
         subtotalCompra[i] = precioSinIva[i] * guardadoFac[i].cantidad;
         totalCompra[i] = guardadoFac[i].valorProducto * guardadoFac[i].cantidad;
+        valorIva[i] = totalCompra[i] - precioSinIva[i];
+        totalFactura += parseInt(totalCompra[i]);
     }
 }
 
@@ -61,6 +65,7 @@ function editarFacturas() {
 function mostrarFacturas() {
     var listaFacturas = document.getElementById('tabla');
     let tablaContent = ``
+    let tablaRes = ``
     for (i = 0; i < guardadoFac.length; i++) {
         tablaContent += `
     <tr>
@@ -71,10 +76,66 @@ function mostrarFacturas() {
       <td>${guardadoFac[i].porcentajeIva}</td>
       <td>${precioSinIva[i].toFixed(2)}</td>
       <td>${subtotalCompra[i].toFixed(2)}</td>
+      <td>${valorIva[i].toFixed(2)}</td>
       <td>${totalCompra[i].toFixed(2)}</td>
       <td><div class='text-center'><div class='btn-group'><button id="btnEditar" type="button" class="btn btn-primary btnEditar" data-toggle="modal"><i class="fas fa-edit"></i>&nbsp;Editar</button></div></div></td>
     </tr>
-  `
+`
     }
+    tablaRes += `
+    <td colspan="7"></td> 
+    <td>Total a Pagar</td> 
+    <td>${ totalFactura.toFixed(2)}</td>
+    <td><div class='text-center'><div class='btn-group'><button id="btnReporte" type="button" class="btn btn-danger btnReporte" data-toggle="modal" onClick="exrportToPdf()"><i class="fas fa-file-pdf"></i>&nbsp;Generar Reporte</button></div></div></td>
+    `
     listaFacturas.innerHTML += tablaContent
+    listaFacturas.innerHTML += tablaRes
+}
+
+function exrportToPdf() {
+    var doc = new jsPDF('p', 'pt', 'letter');
+    var htmlstring = '';
+    var tempVarToCheckPageHeight = 0;
+    var pageHeight = 0;
+    pageHeight = doc.internal.pageSize.height;
+    specialElementHandlers = {
+        '#codFact': function(element, renderer) {
+            return true
+        }
+    };
+    var y = 20;
+    doc.setLineWidth(2);
+    doc.text(200, y = y + 30, "Facturas");
+    doc.autoTable({
+        html: '#table',
+        startY: 80,
+        theme: 'grid',
+        columnStyles: {
+            0: {
+                cellWidth: 50,
+            },
+            1: {
+                cellWidth: 50,
+            },
+            2: {
+                cellWidth: 55,
+            },
+            3: {
+                cellWidth: 50,
+            },
+            4: {
+                cellWidth: 60,
+            },
+            5: {
+                cellWidth: 50,
+            },
+            6: {
+                cellWidth: 55,
+            }
+        },
+        styles: {
+            minCellHeight: 40
+        }
+    })
+    doc.save('Factura.pdf');
 }
