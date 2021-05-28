@@ -91,28 +91,53 @@
                 <form id="form" method="POST">
                     <div class="form-group">
                         <span class="abs-center"></span>
-                        <label for="producto">Codigo Factura</label>
-                        <input type="text" name="codFact" id="codFact" class="form-control" readonly onmousedown="return false;" />
+                        <label for="producto">Codigo Nomina</label>
+                        <input type="text" name="codNomina" id="codNomina" class="form-control" readonly onmousedown="return false;" />
                     </div>
                     <div class="form-group">
                         <span class="abs-center"></span>
-                        <label for="producto">Articulo</label>
-                        <input type="text" name="articuloFact" id="articuloFact" placeholder="Ingrese el articulo" class="form-control" />
+                        <label for="producto">Cedula</label>
+                        <input type="text" name="cedula" id="cedula" placeholder="Ingrese el articulo" class="form-control" />
                     </div>
                     <div class="form-group">
                         <span class="abs-center"></span>
-                        <label for="especificacionP">Cantidad Producto</label>
-                        <input type="number" name="productoCan" id="productoCanFac" placeholder="Ingrese la cantidad del producto" class="form-control" required />
+                        <label for="especificacionP">Nombre Empleado</label>
+                        <input type="number" name="nombreE" id="nombreE" placeholder="Ingrese la cantidad del producto" class="form-control" required />
                     </div>
                     <div class="form-group">
                         <span class="abs-center"></span>
-                        <label for="producto">Precio Unitario con iva</label>
-                        <input type="text" name="precioIva" id="precioIvaFact" placeholder="Ingrese el precio con iva" class="form-control" />
+                        <label for="producto">Sueldo Empleado</label>
+                        <input type="text" name="sueldoE" id="sueldoE" placeholder="Ingrese el precio con iva" class="form-control" />
                     </div>
                     <div class="form-group">
                         <span class="abs-center"></span>
-                        <label for="especificacionP">Porcentaje del iva</label>
-                        <input type="text" name="porcentajeIva" id="porcentajeIvaFac" placeholder="Ingrese el porcentaje del iva" class="form-control" required />
+                        <label for="especificacionP">Dias Trabajados</label>
+                        <input type="text" name="diasT" id="diasT" placeholder="Ingrese el porcentaje del iva" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <span class="abs-center"></span>
+                        <label for="especificacionP">Horas Extras Diurnas</label>
+                        <input type="text" name="horasExtraD" id="horasExtraD" placeholder="Ingrese el porcentaje del iva" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <span class="abs-center"></span>
+                        <label for="especificacionP">Horas Extras Nocturnas</label>
+                        <input type="text" name="horasExtraN" id="horasExtraN" placeholder="Ingrese el porcentaje del iva" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <span class="abs-center"></span>
+                        <label for="especificacionP">Horas Extras Diurnas Dominicales</label>
+                        <input type="text" name="horasExtraDD" id="horasExtraDD" placeholder="Ingrese el porcentaje del iva" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <span class="abs-center"></span>
+                        <label for="especificacionP">Horas Extras Nocturnas Dominicales</label>
+                        <input type="text" name="horasExtraND" id="horasExtraND" placeholder="Ingrese el porcentaje del iva" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <span class="abs-center"></span>
+                        <label for="especificacionP">Horas Recargo Nocturno</label>
+                        <input type="text" name="recargoN" id="recargoN" placeholder="Ingrese el porcentaje del iva" class="form-control" required />
                     </div>
                     <div class="modal-footer">
                         <center>
@@ -126,7 +151,7 @@
     </div>
     <form id="facturasList" class="formEvaluation">
         <div class="title">
-            <h2>FACTURAS</h2>
+            <h2>NOMINA</h2>
         </div>
         <div class="content">
             <div class="animated fadeIn">
@@ -138,8 +163,8 @@
                                     <table class="table table-bordered table-hover border-primary" id="table" border="2" width="100%">
                                         <thead class="bg-primary">
                                             <tr>
-                                                <th id="idFactura">id Factura</th>
-                                                <th id="idFactura">Articulo</th>
+                                                <th id="idFactura">id Nomina</th>
+                                                <th id="idFactura">Cedula</th>
                                                 <th id="nombreProducto">Cantidad</th>
                                                 <th id="valorPedido">Precio Unitario con iva</th>
                                                 <th id="precioConIva">Porcentaje del iva</th>
