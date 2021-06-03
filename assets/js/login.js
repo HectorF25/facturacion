@@ -28,12 +28,12 @@ function Login() {
 
     if (usuario.value == mostarUsuario() && password.value == mostarPassword()) {
         alert('Bienvenido al sistema: ' + usuario.value);
-        window.location = "views/menu.html";
+        window.location = "views/facturar.html";
     } else if (usuario.value == "admin" && password.value == "Admin123*") {
         const passSecretAdmin = prompt('Ingrese el password del administrador')
         if (passSecretAdmin.value == "admin123") {
             alert('Bienvenido al sistema: ' + usuario.value);
-            window.location = "views/menu.html";
+            window.location = "views/facturar.html";
         }
     } else {
         alert("Porfavor ingrese, nombre de usuario y contraseña correctos.");

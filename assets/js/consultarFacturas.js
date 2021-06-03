@@ -15,7 +15,7 @@ function init() {
         if (form.style.visibility === 'hidden') {
             form.style.visibility = 'visible';
         } else {
-            form.style.visibility = 'hidden';
+            form.style.visibility = 'hidden';   
         }
     }, false);
 }
